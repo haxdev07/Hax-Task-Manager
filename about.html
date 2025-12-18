@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Task Manager - About</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top navigation -->
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Dashboard</a>
+      <a href="pending.html" class="nav-link">Pending</a>
+      <a href="completed.html" class="nav-link">Completed</a>
+      <a href="download.html" class="nav-link">Download</a>
+      <a href="about.html" class="nav-link active">About</a>
+    </div>
+    <button id="themeToggleBtn" class="theme-toggle-btn">
+      <span id="themeIcon">🌙</span>
+      <span id="themeLabel">Dark</span>
+    </button>
+  </nav>
+
+  <div class="app">
+    <header>
+      <div class="title-area">
+        <h1>About This Project</h1>
+        <p class="subtitle">Task Manager Web Application • Offline & Browser-based</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Project Overview</h2>
+      <p class="about-text">
+        This is a simple Task Manager application designed to help users
+        create, organize, and track their daily tasks. The application works
+        completely offline using the browser&apos;s local storage, so tasks remain
+        saved even after closing the window.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Student & Details</h2>
+      <p class="about-text">
+        <strong>Student Name:</strong> Harshil<br />
+        <strong>Course:</strong> Diploma (Computer Science & Engineering)<br />
+        <strong>Project Type:</strong> Personal Productivity Tool
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Key Features</h2>
+      <ul class="about-list">
+        <li>Add, edit, delete tasks</li>
+        <li>Mark tasks as completed or pending</li>
+        <li>Priority levels: Low, Medium, High</li>
+        <li>Due date support and overdue highlighting</li>
+        <li>Search tasks by title or description</li>
+        <li>Sort tasks by creation date, due date, or priority</li>
+        <li>Separate pages for Dashboard, Pending tasks, and Completed tasks</li>
+        <li>Dark / Light theme toggle stored in browser</li>
+        <li>Fully offline support using browser localStorage</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>How It Works (Short Explanation)</h2>
+      <ol class="about-list">
+        <li>When the user adds a task, it is stored in an in-memory array.</li>
+        <li>The task list is saved to the browser&apos;s <code>localStorage</code>.</li>
+        <li>When the page loads, tasks are read back from <code>localStorage</code>.</li>
+        <li>JavaScript dynamically creates HTML elements to display each task.</li>
+        <li>Filters (pending/completed), search, and sort are all applied in JavaScript.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Future Improvements</h2>
+      <ul class="about-list">
+        <li>Add user authentication with login and signup</li>
+        <li>Use a real database and backend (for example, Node.js + MongoDB)</li>
+        <li>Add task categories or labels for better organization</li>
+        <li>Enable export/import of tasks as JSON or CSV</li>
+        <li>Turn the web app into a full desktop app using Electron</li>
+      </ul>
+    </section>
+  </div>
+
+
+  <footer class="site-footer">
+  <img src="assets/logo.png" alt="Logo" width="40" />
+
+  <p><strong>Harshil</strong></p>
+  <p>📧 hax.dev07@gmail.com</p>
+
+  <div class="footer-links">
+    <a href="https://www.instagram.com/hax.dev07?igsh=OXBxM2JubGMyOWht">Instagram</a>
+    <a href="https://whatsapp.com/channel/0029Vb6aNp13bbV2AABXIw25">WhatsApp</a>
+    <a href="https://github.com/haxdev07">GitHub</a>
+    <a href="https://haxdev07.github.io/Portfolio/">Portfolio</a>
+  </div>
+</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

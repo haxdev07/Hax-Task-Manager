@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Task Manager - Pending</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top navigation -->
+  <nav class="navbar">
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Dashboard</a>
+    <a href="pending.html" class="nav-link active">Pending</a>
+    <a href="completed.html" class="nav-link">Completed</a>
+    <a href="download.html" class="nav-link">Download</a>
+    <a href="about.html" class="nav-link">About</a>
+  </div>
+  <button id="themeToggleBtn" class="theme-toggle-btn">
+    <span id="themeIcon">🌙</span>
+    <span id="themeLabel">Dark</span>
+  </button>
+</nav>
+
+
+  <div class="app">
+    <header>
+      <div class="title-area">
+        <h1>Pending Tasks</h1>
+        <p class="subtitle">Focus on what still needs to be done ⏳</p>
+      </div>
+    </header>
+
+    <!-- Filters / Search -->
+    <section class="toolbar">
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search pending tasks..."
+        />
+      </div>
+      <div class="toolbar-right">
+        <select id="sortBy">
+          <option value="createdDesc">Newest</option>
+          <option value="createdAsc">Oldest</option>
+          <option value="dueAsc">Due date (earliest)</option>
+          <option value="dueDesc">Due date (latest)</option>
+          <option value="priority">Priority</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Task List -->
+    <section class="card">
+      <div class="card-header">
+        <h2>Pending</h2>
+        <div id="stats" class="stats"></div>
+      </div>
+      <div id="taskList" class="task-list"></div>
+      <p id="emptyState" class="empty-state">
+        No pending tasks. You’re all caught up 🎉
+      </p>
+    </section>
+  </div>
+
+
+  <footer class="site-footer">
+  <img src="assets/logo.png" alt="Logo" width="40" />
+
+  <p><strong>Harshil</strong></p>
+  <p>📧 hax.dev07@gmail.com</p>
+
+  <div class="footer-links">
+    <a href="https://www.instagram.com/hax.dev07?igsh=OXBxM2JubGMyOWht">Instagram</a>
+    <a href="https://whatsapp.com/channel/0029Vb6aNp13bbV2AABXIw25">WhatsApp</a>
+    <a href="https://github.com/haxdev07">GitHub</a>
+    <a href="https://haxdev07.github.io/Portfolio/">Portfolio</a>
+  </div>
+</footer>
+
+  <!-- Important: we tell JS to show only pending tasks -->
+  <script>
+    window.PAGE_FILTER = "pending";
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
